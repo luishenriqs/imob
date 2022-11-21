@@ -4,7 +4,6 @@ import {
     TouchableOpacityProps,
     Platform
 } from 'react-native';
-import { RFValue } from 'react-native-responsive-fontsize';
 import { useTheme } from 'styled-components';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Input } from '@components/Input';
@@ -65,7 +64,7 @@ export function SignIn({navigation}: {navigation: any}, { }: Props) {
                         />
                         <Button
                             title="Sign In"
-                            type='GRAY-BUTTON'
+                            type='PRIMARY'
                             onPress={() => {}}
                         />
                         <ButtonText 

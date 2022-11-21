@@ -11,7 +11,7 @@ type Props = TouchableOpacityProps & {
 
 export function ButtonEditable({ 
     title, 
-    type = 'GREEN-BUTTON',
+    type = 'SECONDARY',
     width = 80,
     length = 80,
     ...rest 

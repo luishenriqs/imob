@@ -14,7 +14,8 @@ export function Properties({navigation}: {navigation: any}) {
         onPress={() => navigation.openDrawer()}
       />
       <Content>
-        <Title>Imóveis</Title>
+        <Title>Cadastre aqui o seu imóvel</Title>
+        
       </Content>
     </Container>
   );

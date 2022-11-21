@@ -31,7 +31,7 @@ export function Wellcome({navigation}: {navigation: any}) {
             <Content>
                 <Button
                     title="Entrar"
-                    type='GRAY-BUTTON'
+                    type='PRIMARY'
                     onPress={() => navigation.navigate('signIn')}
                 />
             </Content>
