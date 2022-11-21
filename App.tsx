@@ -1,21 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
+import 'react-native-gesture-handler';
+/* Necessária a instalação para android: ==> yarn add intl */
+import 'intl';
+import 'intl/locale-data/jsonp/pt-BR';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'react-native';
+import { Routes } from '@routes/index.routes';
+import { Loading } from '@components/Loading';
+import { ThemeProvider } from 'styled-components';
+
+import { useFonts, Roboto_400Regular, Roboto_500Medium, Roboto_700Bold } from '@expo-google-fonts/roboto';
+import theme from '@global/theme';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  const [fontsLoaded] = useFonts({
+    Roboto_400Regular,
+    Roboto_500Medium,
+    Roboto_700Bold
+  });
+
+  return (
+    <ThemeProvider theme={theme}>
+        <StatusBar
+          barStyle="light-content"
+          backgroundColor="transparent"
+          translucent
+        />
+      {fontsLoaded ? <Routes /> : <Loading />}
+    </ThemeProvider>
+  );
+};
