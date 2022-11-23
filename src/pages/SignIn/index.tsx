@@ -54,21 +54,23 @@ export function SignIn({navigation}: {navigation: any}, { }: Props) {
                     <FormContent>
                         <Input 
                             placeholder='Email'
+                            type='SECONDARY'
                             keyboardType='email-address'
                             autoCorrect={false}
                             autoCapitalize='none'
                         />
                         <Input 
                             placeholder='Password'
+                            type='SECONDARY'
                             secureTextEntry
                         />
                         <Button
                             title="Sign In"
-                            type='PRIMARY'
+                            type='SECONDARY'
                             onPress={() => {}}
                         />
                         <ButtonText 
-                            title="Recuperar senha" 
+                            title="Recuperar senha"
                             onPress={() => {}} 
                         />
                     </FormContent>

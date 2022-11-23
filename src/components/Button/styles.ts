@@ -1,7 +1,7 @@
 import { TouchableOpacity } from "react-native";
 import styled, { css } from "styled-components/native";
 
-export type ButtonTypeStyleProps = "SECONDARY" | "PRIMARY";
+export type ButtonTypeStyleProps = "PRIMARY" | "SECONDARY";
 
 type Props = {
   type: ButtonTypeStyleProps;
@@ -15,15 +15,16 @@ export const Container = styled(TouchableOpacity)<Props>`
   align-items: center;
   justify-content: center;
   border-radius: 20px;
-
-  ${({ type, theme }) =>
-    type === "SECONDARY" &&
-    css`
-      background-color: ${theme.COLORS.green_700};
-    `};
+  margin-bottom: 10px;
 
   ${({ type, theme }) =>
     type === "PRIMARY" &&
+    css`
+      background-color: ${theme.COLORS.blue_800};
+    `};
+
+  ${({ type, theme }) =>
+    type === "SECONDARY" &&
     css`
       border: 1px ${theme.COLORS.blue_900};
     `};

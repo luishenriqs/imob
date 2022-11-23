@@ -7,11 +7,13 @@ type Props = TextInputProps & {
     type?: InputTypeStyleProps;
 }
 
-export function Input({ type = 'PRIMARY', ...rest }: Props) {
+export function InputTextArea({ type = 'PRIMARY', ...rest }: Props) {
     const { COLORS } = useTheme();
     return (
         <Container 
             placeholderTextColor={COLORS.gray_500}
+            multiline={true}
+            numberOfLines={5}
             type={type}
             {...rest}
         />

@@ -11,11 +11,10 @@ export const Content = styled.View`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px 15px 0;
 `;
 
 export const Title = styled.Text`
-  margin-top: 30px;
+  margin: 20px 0;
   ${({ theme }) => css`
     color: ${theme.COLORS.gray_600};
     font-size: ${theme.FONT_SIZE.SM};

@@ -9,7 +9,7 @@ export function Routes() {
   //console.log(user);
   return(
       <NavigationContainer>
-          {false ? <AppRoutes /> : <AuthRoutes />}
+          {true ? <AppRoutes /> : <AuthRoutes />}
       </NavigationContainer>
   )
 }

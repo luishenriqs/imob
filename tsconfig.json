@@ -29,6 +29,11 @@
       "@services/*": [
         "./src/services/*"
       ]
-    }
+    },
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin"
+      }
+    ]
   }
 }

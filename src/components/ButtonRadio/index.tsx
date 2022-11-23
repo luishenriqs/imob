@@ -13,13 +13,15 @@ export function ButtonRadio({ title, type, ...rest }: Props) {
     const theme = useTheme();
     return (
         <Container 
-            type={type}
             {...rest}
         >
             <MaterialCommunityIcons
                 size={28}
                 name={type ? 'radiobox-marked' : 'radiobox-blank'}
-                style={{ color: type ? theme.COLORS.green_700 : theme.COLORS.gray_900}}
+                style={{ color: type 
+                    ? theme.COLORS.blue_700 
+                    : theme.COLORS.gray_600
+                }}
             />
             <Title>
                 {title}
